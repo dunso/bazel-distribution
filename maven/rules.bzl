@@ -64,7 +64,8 @@ def _generate_pom_file(ctx, version_file):
 
     ctx.actions.run(
         executable = ctx.executable._pom_generator,
-        inputs = [version_file, ctx.file.workspace_refs],
+        #inputs = [version_file, ctx.file.workspace_refs],
+        inputs = [version_file],
         outputs = [pom_file],
         arguments = [
             "--project_name=" + ctx.attr.project_name,
