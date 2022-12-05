@@ -78,7 +78,7 @@ def _generate_pom_file(ctx, version_file):
             "--target_deps_coordinates=" + ";".join(pom_deps),
             "--version_file=" + version_file.path,
             "--output_file=" + pom_file.path,
-            "--workspace_refs_file=" + ctx.file.workspace_refs.path,
+            #"--workspace_refs_file=" + ctx.file.workspace_refs.path,
         ],
     )
 
